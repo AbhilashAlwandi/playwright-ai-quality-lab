@@ -1,0 +1,21 @@
+{
+  "name": "playwright-ai-quality-lab",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Portfolio project: Playwright + TypeScript test automation with sharded CI, automated quality metrics, and LLM evaluation (promptfoo) including prompt-injection checks.",
+  "scripts": {
+    "test": "playwright test",
+    "test:ui": "playwright test --project=ui",
+    "test:api": "playwright test --project=api",
+    "report": "playwright show-report",
+    "metrics": "tsx scripts/quality-metrics.ts",
+    "eval": "cd llm-eval && npx promptfoo eval -c promptfooconfig.yaml",
+    "eval:view": "cd llm-eval && npx promptfoo view"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.49.0",
+    "@types/node": "^22.0.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.6.0"
+  }
+}
